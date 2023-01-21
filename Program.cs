@@ -4,6 +4,7 @@ using MongoFramework;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//dotnet new webapi --output BookStoreApi --use-minimal-apis
 
 builder.Services.AddTransient<IMongoDbConnection>(sp =>
     MongoDbConnection.FromConnectionString(builder.Configuration.GetConnectionString("BookStoreDbConnection")));
